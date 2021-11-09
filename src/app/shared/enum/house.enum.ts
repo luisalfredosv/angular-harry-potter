@@ -1,6 +1,6 @@
 export enum EHouse {
-  slytherin,
-  gryffindor,
-  ravenclaw,
-  hufflepuff,
+  SLYTHERIN = "slytherin" ,
+  GRYFFINDOR = "gryffindor",
+  RAVENCLAW = "ravenclaw",
+  HUFFLEPUFF = "hufflepuff",
 }
