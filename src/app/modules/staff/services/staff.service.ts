@@ -13,6 +13,6 @@ export class StaffService {
   constructor(private http: HttpClient) {}
 
   getStaff$(): Observable<IStaff[]> {
-    return this.http.get(`${this.URL}/staff`).pipe(map((data: any) => data));
+    return this.http.get(`${this.URL}/characters/staff`).pipe(map((data: any) => data));
   }
 }
