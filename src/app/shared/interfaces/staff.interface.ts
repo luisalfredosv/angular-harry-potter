@@ -1,3 +1,5 @@
+import { Wand } from "./wand.interface";
+
 export interface IStaff {
   name: string;
   alternate_names: string[];
@@ -18,10 +20,4 @@ export interface IStaff {
   alternate_actors: string[];
   alive: boolean;
   image: string;
-}
-
-interface Wand {
-  wood: string;
-  core: string;
-  length: string;
 }

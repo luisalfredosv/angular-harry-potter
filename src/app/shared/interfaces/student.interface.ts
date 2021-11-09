@@ -1,6 +1,6 @@
 import { Wand } from "./wand.interface";
 
-export interface ICharacter {
+export interface IStudent {
   name: string;
   alternate_names: string[];
   species: string;
