@@ -4,12 +4,14 @@ import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
 import { TableComponent } from './components/table/table.component';
 import { RouterModule } from '@angular/router';
 import { ImgBrokenDirective } from './directives/img-broken.directive';
+import { AgePipe } from './pipe/age.pipe';
 
 @NgModule({
   declarations: [
     MenuBarComponent,
     TableComponent,
-    ImgBrokenDirective
+    ImgBrokenDirective,
+    AgePipe
   ],
   imports: [
     CommonModule,
@@ -18,7 +20,8 @@ import { ImgBrokenDirective } from './directives/img-broken.directive';
   exports:[
     MenuBarComponent,
     TableComponent,
-    ImgBrokenDirective
+    ImgBrokenDirective,
+    AgePipe
   ]
 })
 export class SharedModule { }
