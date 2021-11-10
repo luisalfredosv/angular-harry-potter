@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { CharacterRoutingModule } from './character-routing.module';
 import { CharacterPageComponent } from './pages/character-page/character-page.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { CharacterPageComponent } from './pages/character-page/character-page.co
   ],
   imports: [
     CommonModule,
-    CharacterRoutingModule
+    CharacterRoutingModule,
+    SharedModule
   ]
 })
 export class CharacterModule { }
