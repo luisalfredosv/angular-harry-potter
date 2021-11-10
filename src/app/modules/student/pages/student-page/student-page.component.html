@@ -1,7 +1,3 @@
-<p>student-page works!</p>
+<h1 class="mt-2">Students</h1>
 
-<pre>
-    {{
-        listStudents$ | async | json
-    }}
-</pre>
+<app-table [listData]="listStudents$ | async"></app-table>
