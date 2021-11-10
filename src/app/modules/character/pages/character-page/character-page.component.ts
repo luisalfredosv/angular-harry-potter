@@ -11,15 +11,41 @@ import { CharacterService } from '../../services/character.service';
 export class CharacterPageComponent implements OnInit {
   constructor(private characterService: CharacterService) {}
 
-  // house$: Observable<string> = of('');
   listCharacters$: Observable<any> = of([]);
+  loading: boolean = false;
+  listHouse: {
+    name: string;
+  }[] = [
+    {
+      name: 'slytherin',
+    },
+    {
+      name: 'gryffindor',
+    },
+    {
+      name: 'ravenclaw',
+    },
+    {
+      name: 'hufflepuff',
+    },
+  ];
 
   ngOnInit(): void {
-    this.getCharacters();
   }
 
-  getCharacters(): void {
-    const house: EHouse = EHouse.GRYFFINDOR;
+  getCharacters(house: EHouse): void {
     this.listCharacters$ = this.characterService.getCharacter$(house);
+  }
+
+  onChange(select: any) {
+    const house : EHouse = select.target.value;
+    if(house){
+      this.loading = true;
+      this.getCharacters(house)
+    }else{
+      this.listCharacters$ = of([])
+    }
+    this.loading = false;
+
   }
 }
