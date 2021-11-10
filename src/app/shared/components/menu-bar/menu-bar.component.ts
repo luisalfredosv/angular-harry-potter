@@ -15,22 +15,22 @@ export class MenuBarComponent implements OnInit {
       {
         label: 'Home',
         icon: 'pi pi-fw pi-home',
-        routerLink: '/',
+        link: '/',
       },
       {
         label: 'Staff',
         icon: '',
-        routerLink: 'staff',
+        link: 'staff',
       },
       {
         label: 'Characters',
         icon: '',
-        routerLink: 'characters',
+        link: 'characters',
       },
       {
         label: 'Students',
         icon: '',
-        routerLink: 'students',
+        link: 'students',
       },
     ];
   }
