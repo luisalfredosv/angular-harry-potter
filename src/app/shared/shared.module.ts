@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
 import { TableComponent } from './components/table/table.component';
 import { RouterModule } from '@angular/router';
+import { ImgBrokenDirective } from './directives/img-broken.directive';
 
 @NgModule({
   declarations: [
     MenuBarComponent,
-    TableComponent
+    TableComponent,
+    ImgBrokenDirective
   ],
   imports: [
     CommonModule,
@@ -15,7 +17,8 @@ import { RouterModule } from '@angular/router';
   ],
   exports:[
     MenuBarComponent,
-    TableComponent
+    TableComponent,
+    ImgBrokenDirective
   ]
 })
 export class SharedModule { }
