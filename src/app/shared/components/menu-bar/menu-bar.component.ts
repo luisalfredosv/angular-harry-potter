@@ -13,11 +13,6 @@ export class MenuBarComponent implements OnInit {
   ngOnInit(): void {
     this.items = [
       {
-        label: 'Home',
-        icon: 'pi pi-fw pi-home',
-        link: '/',
-      },
-      {
         label: 'Staff',
         icon: '',
         link: 'staff',
