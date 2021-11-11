@@ -7,6 +7,8 @@ import { ImgBrokenDirective } from './directives/img-broken.directive';
 import { AgePipe } from './pipe/age.pipe';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 
+import { NgxPaginationModule, PaginatePipe } from 'ngx-pagination';
+
 @NgModule({
   declarations: [
     MenuBarComponent,
@@ -17,14 +19,16 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    NgxPaginationModule
   ],
   exports:[
     MenuBarComponent,
     TableComponent,
     ImgBrokenDirective,
     AgePipe,
-    SpinnerComponent
+    SpinnerComponent,
+    PaginatePipe
   ]
 })
 export class SharedModule { }

@@ -11,6 +11,7 @@ import { IStudent } from '../../interfaces/student.interface';
 export class TableComponent implements OnInit {
 
   @Input() listData : ICharacter[] | IStaff[] |  IStudent[] = [];
+  currentPage: number = 1;
 
   constructor() { }
 

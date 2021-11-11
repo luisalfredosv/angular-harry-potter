@@ -4,6 +4,7 @@
       <table class="table table-hover">
         <thead>
           <tr>
+            <th scope="col">#</th>
             <th scope="col">Name</th>
             <th scope="col">Species</th>
             <th scope="col">Gender</th>
@@ -15,20 +16,30 @@
 
         <tbody>
           <tr
-            *ngFor="let data of listData"
+            *ngFor="
+              let data of listData
+                | paginate: { itemsPerPage: 4, currentPage: currentPage };
+              let i = index
+            "
           >
+            <td>{{ i + 1 }}</td>
             <td>{{ data.name }}</td>
             <td>{{ data.species | titlecase }}</td>
             <td>{{ data.gender | titlecase }}</td>
             <td>{{ data.house }}</td>
-            <td>{{ data.dateOfBirth ?? data.yearOfBirth | age}}</td>
+            <td>{{ data.dateOfBirth ?? data.yearOfBirth | age }}</td>
             <td>
-              <img appImgBroken [src]="data.image" class="rounded" [alt]="data.name" >
+              <img
+                appImgBroken
+                [src]="data.image"
+                class="rounded"
+                [alt]="data.name"
+              />
             </td>
           </tr>
         </tbody>
       </table>
-
+      <pagination-controls (pageChange)="currentPage = $event"> </pagination-controls>
     </div>
   </div>
 </div>
