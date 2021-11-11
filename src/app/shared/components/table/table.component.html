@@ -16,17 +16,10 @@
         *ngFor="let data of listData"
       >
         <td>{{ data.name }}</td>
-        <td>{{ data.species }}</td>
-        <td>
-          {{ data.gender }}
-        </td>
-        <td>
-          {{ data.house }}
-        </td>
-        <td>
-          {{ data.dateOfBirth ?? data.yearOfBirth | age}}
-        </td>
-
+        <td>{{ data.species | titlecase }}</td>
+        <td>{{ data.gender | titlecase }}</td>
+        <td>{{ data.house }}</td>
+        <td>{{ data.dateOfBirth ?? data.yearOfBirth | age}}</td>
         <td>
           <img appImgBroken [src]="data.image" class="rounded w-25" alt="...">
         </td>
