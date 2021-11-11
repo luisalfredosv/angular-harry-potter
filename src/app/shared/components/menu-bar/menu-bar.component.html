@@ -1,6 +1,12 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="container navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" routerLink="/">Harry Potter</a>
+    <a class="navbar-brand" routerLink="/"
+      ><img
+        src="assets/img/hp.png"
+        class="mr-15"
+        width="150px"
+        alt="Harry Potter Logo"
+    /></a>
     <button
       class="navbar-toggler"
       type="button"
@@ -15,11 +21,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item" *ngFor="let item of items">
-          <a class="nav-link" [routerLink]="[item.link]" routerLinkActive="active"
+          <a
+            class="nav-link"
+            [routerLink]="[item.link]"
+            routerLinkActive="active"
             >{{ item.label }}</a
           >
         </li>
-
       </ul>
     </div>
   </div>
