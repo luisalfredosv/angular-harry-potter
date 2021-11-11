@@ -1,3 +1,5 @@
 <h1 class="mt-2">Students</h1>
 
-<app-table [listData]="listStudents$ | async"></app-table>
+<div *ngIf="(listStudents$ | async)?.length > 0">
+  <app-table [listData]="listStudents$ | async"></app-table>
+</div>

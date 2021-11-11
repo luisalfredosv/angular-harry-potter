@@ -14,8 +14,3 @@
 <div *ngIf="(listCharacters$ | async)?.length > 0">
   <app-table [listData]="listCharacters$ | async"></app-table>
 </div>
-
-<div class="d-flex align-items-center" *ngIf="loading">
-  <strong>Loading...</strong>
-  <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
-</div>
