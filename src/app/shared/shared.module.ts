@@ -8,6 +8,7 @@ import { AgePipe } from './pipe/age.pipe';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 
 import { NgxPaginationModule, PaginatePipe } from 'ngx-pagination';
+import { AlertErrorComponent } from './components/alert-error/alert-error.component';
 
 @NgModule({
   declarations: [
@@ -16,19 +17,17 @@ import { NgxPaginationModule, PaginatePipe } from 'ngx-pagination';
     ImgBrokenDirective,
     AgePipe,
     SpinnerComponent,
+    AlertErrorComponent,
   ],
-  imports: [
-    CommonModule,
-    RouterModule,
-    NgxPaginationModule
-  ],
-  exports:[
+  imports: [CommonModule, RouterModule, NgxPaginationModule],
+  exports: [
     MenuBarComponent,
     TableComponent,
     ImgBrokenDirective,
     AgePipe,
     SpinnerComponent,
-    PaginatePipe
-  ]
+    PaginatePipe,
+    AlertErrorComponent,
+  ],
 })
-export class SharedModule { }
+export class SharedModule {}
