@@ -9,6 +9,7 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
 
 import { NgxPaginationModule, PaginatePipe } from 'ngx-pagination';
 import { AlertErrorComponent } from './components/alert-error/alert-error.component';
+import { TableMatComponent } from './components/table-mat/table-mat.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { AlertErrorComponent } from './components/alert-error/alert-error.compon
     AgePipe,
     SpinnerComponent,
     AlertErrorComponent,
+    TableMatComponent
   ],
   imports: [CommonModule, RouterModule, NgxPaginationModule],
   exports: [
@@ -28,6 +30,7 @@ import { AlertErrorComponent } from './components/alert-error/alert-error.compon
     SpinnerComponent,
     PaginatePipe,
     AlertErrorComponent,
+    TableMatComponent
   ],
 })
 export class SharedModule {}
