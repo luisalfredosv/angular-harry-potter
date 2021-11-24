@@ -7,9 +7,8 @@ import { ImgBrokenDirective } from './directives/img-broken.directive';
 import { AgePipe } from './pipe/age.pipe';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 
-import { NgxPaginationModule, PaginatePipe } from 'ngx-pagination';
+import { MaterialModule } from '../material/material.module';
 import { AlertErrorComponent } from './components/alert-error/alert-error.component';
-import { TableMatComponent } from './components/table-mat/table-mat.component';
 
 @NgModule({
   declarations: [
@@ -19,18 +18,20 @@ import { TableMatComponent } from './components/table-mat/table-mat.component';
     AgePipe,
     SpinnerComponent,
     AlertErrorComponent,
-    TableMatComponent
   ],
-  imports: [CommonModule, RouterModule, NgxPaginationModule],
+  imports: [
+    CommonModule,
+    MaterialModule,
+    RouterModule
+  ],
   exports: [
+    MaterialModule,
     MenuBarComponent,
     TableComponent,
     ImgBrokenDirective,
     AgePipe,
     SpinnerComponent,
-    PaginatePipe,
     AlertErrorComponent,
-    TableMatComponent
   ],
 })
 export class SharedModule {}
