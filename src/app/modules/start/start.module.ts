@@ -5,7 +5,6 @@ import { StartRoutingModule } from './start-routing.module';
 import { StartPageComponent } from './pages/start-page/start-page.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 
-
 @NgModule({
   declarations: [
     StartPageComponent
@@ -13,7 +12,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
   imports: [
     CommonModule,
     StartRoutingModule,
-    SharedModule
+    SharedModule,
   ]
 })
 export class StartModule { }

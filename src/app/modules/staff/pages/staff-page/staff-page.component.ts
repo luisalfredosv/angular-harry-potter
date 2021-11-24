@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { StaffService } from '../../services/staff.service';
 @Component({
@@ -8,6 +8,7 @@ import { StaffService } from '../../services/staff.service';
 })
 export class StaffPageComponent implements OnInit {
 
+  @Output() data: EventEmitter<any[]> = new EventEmitter<any[]>();
   constructor(private staffService: StaffService) { }
 
   listStaffs$: Observable<any> = of([]);
@@ -17,7 +18,7 @@ export class StaffPageComponent implements OnInit {
   }
 
   getStaff():void {
-    this.listStaffs$ = this.staffService.getStaff$()
+    this.listStaffs$ = this.staffService.getStaff$();
   }
 
 }
