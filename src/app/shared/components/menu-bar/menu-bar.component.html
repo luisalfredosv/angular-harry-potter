@@ -1,4 +1,4 @@
-<nav class="container navbar navbar-expand-lg navbar-light bg-light">
+<!-- <nav class="container navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" routerLink="/"
       ><img
@@ -31,4 +31,64 @@
       </ul>
     </div>
   </div>
-</nav>
+</nav> -->
+<mat-toolbar color="white">
+  <span>
+    <a class="navbar-brand" routerLink="/">
+      <img
+        src="assets/img/hp.png"
+        class="mr-15"
+        width="150px"
+        alt="Harry Potter Logo"
+      />
+    </a>
+  </span>
+  <span class="example-spacer"></span>
+  <button
+    mat-button
+    *ngFor="let item of items"
+    routerLinkActive="active-link"
+    [routerLink]="[item.link]"
+  >
+    {{ item.label }}
+  </button>
+  <span class="example-spacer"></span>
+  <!-- <button mat-button routerLink="/dashboard">LogOut</button> -->
+  <button
+    mat-icon-button
+    class="example-icon"
+    routerLink="/"
+    aria-label="Example icon-button with menu icon"
+  >
+    <!-- <mat-icon>logout</mat-icon> -->
+  </button>
+</mat-toolbar>
+
+<!-- <mat-toolbar fxLayout="row" color="primary">
+  <span fxFlex>Responsive Toolbar Demo</span>
+  <button mat-button *ngFor="let item of menuItems"
+      fxShow="item.showOnDesktop"
+      fxShow.xs="item.showOnMobile"
+      fxShow.sm="item.showOnTablet">
+      <mat-icon class="mr">{{item.icon}}</mat-icon>
+      {{item.label}}
+  </button>
+  <ng-container>
+      <button mat-icon-button >
+          <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #dropMenu="matMenu">
+          <ng-container *ngFor="let item of menuItems">
+              <div fxShow="!item.showOnDesktop"
+                   fxShow.sm="!item.showOnTablet"
+                   fxShow.xs="!item.showOnMobile">
+                  <button mat-menu-item>
+                      <mat-icon class="mr">{{item.icon}}</mat-icon>
+                      {{item.label}}
+                  </button>
+                  <mat-divider></mat-divider>
+              </div>
+          </ng-container>
+      </mat-menu>
+  </ng-container>
+</mat-toolbar> -->
