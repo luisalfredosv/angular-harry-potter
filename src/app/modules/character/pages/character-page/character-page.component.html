@@ -1,17 +1,12 @@
-<h1 class="mt-2">Characters</h1>
+<h1>Characters</h1>
+<mat-form-field appearance="fill">
+  <mat-label>Select a house</mat-label>
+  <mat-select >
 
-<div class="pt-2 pb-4">
-  <select
-  class="form-select"
-  aria-label="Default select example"
-  (change)="onChange($event)"
->
-  <option selected value="">Select a house</option>
-  <option *ngFor="let house of listHouse" [value]="house.name">
-    {{ house.name | titlecase }}
-  </option>
-</select>
-</div>
+    <mat-option (onSelectionChange)="onChange($event)" *ngFor="let house of listHouse" [value]="house.name">{{ house.name | titlecase }}</mat-option>
+  </mat-select>
+</mat-form-field>
+
 
 <div *ngIf="(listCharacters$ | async)?.length > 0">
   <app-table [listData]="listCharacters$ | async"></app-table>
